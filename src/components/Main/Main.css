@@ -1,0 +1,19 @@
+.cards__text {
+  margin: 0 0 24px;
+}
+
+.cards__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 328px;
+  height: 328px;
+  background-color: white;
+  border-radius: 12px;
+}

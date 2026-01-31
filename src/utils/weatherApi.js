@@ -1,0 +1,35 @@
+import { APIkey, coordinates } from "./constants";
+
+const getWeatherType = (temperature) => {
+  if (temperature >= 86) return "hot";
+  if (temperature >= 66) return "warm";
+  return "cold";
+};
+
+export const getWeather = () => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`;
+
+  return fetch(url).then((res) => {
+    if (res.ok) {
+      return res.json();
+    }
+    return Promise.reject(`Error: ${res.status}`);
+  });
+};
+
+export const filterWeatherData = (data) => {
+  const result = {
+    city: data.name,
+    temp: {
+      F: Math.round(data.main.temp),
+    },
+    type: getWeatherType(data.main.temp),
+    condition: data.weather[0].main.toLowerCase(),
+    isDay: isDay(data.sys, Date.now()),
+  };
+  return result;
+};
+
+const isDay = (sys, now) => {
+  return now > sys.sunrise * 1000 && now < sys.sunset * 1000;
+};
