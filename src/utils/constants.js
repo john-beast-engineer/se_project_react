@@ -90,12 +90,12 @@ export const weatherOptions = [
   },
   {
     day: true,
-    condition: "storm",
+    condition: "thunderstorm",
     url: "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?w=800",
   },
   {
     day: false,
-    condition: "storm",
+    condition: "thunderstorm",
     url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?w=800",
   },
 ];
@@ -108,4 +108,4 @@ export const coordinates = {
   longitude: -79.9959,
 };
 
-export const APIkey = "ba2c9a9bba10f7fae7a93dfe9d6b1395";
+export const apiKey = "ba2c9a9bba10f7fae7a93dfe9d6b1395";

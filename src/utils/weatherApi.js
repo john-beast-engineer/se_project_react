@@ -1,4 +1,4 @@
-import { APIkey, coordinates } from "./constants";
+import { apiKey, coordinates } from "./constants";
 
 const getWeatherType = (temperature) => {
   if (temperature >= 86) return "hot";
@@ -7,7 +7,7 @@ const getWeatherType = (temperature) => {
 };
 
 export const getWeather = () => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${apiKey}`;
 
   return fetch(url).then((res) => {
     if (res.ok) {

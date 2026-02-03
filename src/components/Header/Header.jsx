@@ -11,7 +11,7 @@ function Header({ handleAddClick, weatherData }) {
     <header className="header">
       <img src={logo} alt="WTWR logo" className="header__logo" />
       <p className="header__date-location">
-        {currentDate}, {weatherData.city}
+        {currentDate}, {weatherData?.city || "Loading..."}
       </p>
       <button
         type="button"

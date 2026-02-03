@@ -7,11 +7,14 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { defaultClothingItems } from "../../utils/constants";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [weatherData, setWeatherData] = useState({});
+  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
+
   const handleAddClick = () => {
     setActiveModal("add-garment");
   };
@@ -51,7 +54,11 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-        <Main handleCardClick={handleCardClick} weatherData={weatherData} />
+        <Main
+          handleCardClick={handleCardClick}
+          weatherData={weatherData}
+          clothingItems={clothingItems}
+        />
 
         <Footer />
 
@@ -60,6 +67,7 @@ function App() {
           buttonText="Add garment"
           isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
+          name="add-garment"
         >
           <label className="modal__label">
             Name

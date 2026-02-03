@@ -12,7 +12,7 @@ function WeatherCard({ weatherData }) {
   const weatherImageUrl = weatherOption?.url || defaultWeatherImage;
   return (
     <section className="weather-card">
-      <p className="weather-card__temp">{weatherData?.temp?.F}°F</p>
+      <p className="weather-card__temp">{weatherData?.temp?.F || "--"}°F</p>
 
       <img
         src={weatherImageUrl}
