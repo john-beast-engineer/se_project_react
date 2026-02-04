@@ -22,6 +22,25 @@ function App() {
     setActiveModal("preview");
     setSelectedCard(card);
   };
+
+  const handleAddItemSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.itemName.value;
+    const link = form.link.value;
+    const weather = form.weather.value;
+
+    const newItem = {
+      _id: Date.now(),
+      name,
+      link,
+      weather,
+    };
+    setClothingItems([newItem, ...clothingItems]);
+    closeActiveModal();
+    form.reset();
+  };
+
   const closeActiveModal = () => {
     setActiveModal("");
   };
@@ -68,10 +87,17 @@ function App() {
           isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
           name="add-garment"
+          onSubmit={handleAddItemSubmit}
         >
           <label className="modal__label">
             Name
-            <input type="text" className="modal__input" placeholder="Name" />
+            <input
+              type="text"
+              className="modal__input"
+              placeholder="Name"
+              name="itemName"
+              required
+            />
           </label>
           <label className="modal__label">
             Image
@@ -79,8 +105,41 @@ function App() {
               type="url"
               className="modal__input"
               placeholder="Image URL"
+              name="link"
+              required
             />
           </label>
+          <fieldset className="modal__fieldset">
+            <legend className="modal__legend">Select the weather type:</legend>
+            <label className="modal__radio-label">
+              <input
+                type="radio"
+                name="weather"
+                value="hot"
+                className="modal__radio"
+                required
+              />
+              Hot
+            </label>
+            <label className="modal__radio-label">
+              <input
+                type="radio"
+                name="weather"
+                value="warm"
+                className="modal__radio"
+              />
+              Warm
+            </label>
+            <label className="modal__radio-label">
+              <input
+                type="radio"
+                name="weather"
+                value="cold"
+                className="modal__radio"
+              />
+              Cold
+            </label>
+          </fieldset>
         </ModalWithForm>
 
         <ItemModal

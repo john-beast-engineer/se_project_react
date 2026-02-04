@@ -11,14 +11,11 @@ function WeatherCard({ weatherData }) {
 
   const weatherImageUrl = weatherOption?.url || defaultWeatherImage;
   return (
-    <section className="weather-card">
+    <section
+      className="weather-card"
+      style={{ backgroundImage: `url(${weatherImageUrl})` }}
+    >
       <p className="weather-card__temp">{weatherData?.temp?.F || "--"}°F</p>
-
-      <img
-        src={weatherImageUrl}
-        alt={weatherData?.condition || "weather"}
-        className="weather-card__image"
-      />
     </section>
   );
 }

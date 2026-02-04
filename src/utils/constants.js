@@ -41,67 +41,69 @@ export const weatherOptions = [
   {
     day: true,
     condition: "clear",
-    url: "https://images.unsplash.com/photo-1601297183305-6df142704ea2?w=800",
+    url: new URL("../assets/sunny.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "clear",
-    url: "https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800",
+    url: new URL("../assets/sunnynight.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "clouds",
-    url: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800",
+    url: new URL("../assets/cloudy.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "clouds",
-    url: "https://images.unsplash.com/photo-1509803874385-db7c23652552?w=800",
+    url: new URL("../assets/cloudynight.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "rain",
-    url: "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=800",
+    url: new URL("../assets/rain.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "rain",
-    url: "https://images.unsplash.com/photo-1501999635878-71cb5379c2d8?w=800",
+    url: new URL("../assets/rainnight.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "snow",
-    url: "https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=800",
+    url: new URL("../assets/snow.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "snow",
-    url: "https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?w=800",
+    url: new URL("../assets/snownight.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "fog",
-    url: "https://images.unsplash.com/photo-1543968996-ee822b8176ba?w=800",
+    url: new URL("../assets/fog.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "fog",
-    url: "https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?w=800",
+    url: new URL("../assets/fognight.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "thunderstorm",
-    url: "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?w=800",
+    url: new URL("../assets/storm.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "thunderstorm",
-    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?w=800",
+    url: new URL("../assets/stormnight.svg", import.meta.url).href,
   },
 ];
 
-export const defaultWeatherImage =
-  "https://images.unsplash.com/photo-1601297183305-6df142704ea2?w=800";
+export const defaultWeatherImage = new URL(
+  "../assets/sunny.svg",
+  import.meta.url,
+);
 
 export const coordinates = {
   latitude: 40.4406,

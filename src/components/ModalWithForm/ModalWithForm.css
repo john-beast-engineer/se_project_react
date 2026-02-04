@@ -49,6 +49,31 @@
   flex-direction: column;
 }
 
+.modal__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.modal__legend {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.modal__radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal__radio {
+  cursor: pointer;
+}
+
 .modal__submit {
   margin-top: 24px;
   padding: 12px;
@@ -64,13 +89,20 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .modal__input {
-  padding: 12px;
-  border: 1px solid #000;
-  border-radius: 8px;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
   font-size: 16px;
+  outline: none;
+}
+
+.modal__input::placeholder {
+  color: #999;
 }
