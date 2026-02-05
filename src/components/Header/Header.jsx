@@ -1,5 +1,6 @@
 import "./Header.css";
 import logo from "../../assets/logo.svg";
+import avatar from "../../assets/avatar.png";
 
 function Header({ handleAddClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
@@ -22,11 +23,7 @@ function Header({ handleAddClick, weatherData }) {
       </button>
       <div className="header__user">
         <p className="header__username">Terrence Tegegne</p>
-        <img
-          src="https://via.placeholder.com/40"
-          alt="User avatar"
-          className="header__avatar"
-        />
+        <img src={avatar} alt="Terrence Tegegne" className="header__avatar" />
       </div>
     </header>
   );

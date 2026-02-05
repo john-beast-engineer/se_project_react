@@ -26,3 +26,7 @@
   margin: 0;
   color: #8b8b8b;
 }
+
+.modal__close_type_preview {
+  background-image: url("../../assets/close-white.svg");
+}

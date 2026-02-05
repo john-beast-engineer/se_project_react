@@ -7,9 +7,11 @@ function ItemModal({ isOpen, onClose, card }) {
         className="modal__content modal__content_type_image"
         onClick={(e) => e.stopPropagation()}
       >
-        <button type="button" className="modal__close" onClick={onClose}>
-          x
-        </button>
+        <button
+          type="button"
+          className="modal__close modal__close_type_preview"
+          onClick={onClose}
+        ></button>
 
         <img src={card?.link} alt={card.name} className="modal__image" />
         <div className="modal__footer">

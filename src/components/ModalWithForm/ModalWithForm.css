@@ -22,20 +22,24 @@
 
 .modal__content {
   background-color: white;
-  padding: 32px;
+  padding: 28px 28px 36px;
   border-radius: 20px;
   width: 496px;
   position: relative;
 }
 
 .modal__close {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
 }
 
 .modal__title {
@@ -75,7 +79,8 @@
 }
 
 .modal__submit {
-  margin-top: 24px;
+  width: 124px;
+  margin-top: 8px;
   padding: 12px;
   background-color: black;
   color: white;

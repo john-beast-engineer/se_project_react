@@ -6,15 +6,23 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__name {
   position: absolute;
-  top: 18px;
-  left: 20px;
-  margin: 0;
-  font-size: 20px;
-  font-weight: 500;
+  top: 20px;
+  padding: 2px 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: white;
+  border-radius: 4px;
+  margin: 0 10px 0 0;
+  max-width: 200px;
 }
 
 .card__image {
