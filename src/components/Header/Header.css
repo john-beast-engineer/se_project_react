@@ -44,3 +44,24 @@
   height: 40px;
   border-radius: 50%;
 }
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__profile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}

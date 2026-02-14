@@ -1,4 +1,4 @@
-.modal__content_type_image {
+.modal__container_type_image {
   padding: 0;
   max-width: 498px;
   background-color: white;
@@ -14,6 +14,10 @@
 
 .modal__footer {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .modal__caption {
@@ -25,6 +29,15 @@
 .modal__weather {
   margin: 0;
   color: #8b8b8b;
+  width: 100%;
+}
+
+.modal__delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4d00;
+  font-size: 14px;
 }
 
 .modal__close_type_preview {

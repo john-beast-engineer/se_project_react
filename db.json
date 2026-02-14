@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "_id": "1",
+      "name": "Cap",
+      "weather": "hot",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png"
+    },
+    {
+      "_id": "2",
+      "name": "Hoodie",
+      "weather": "warm",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Hoodie.png"
+    },
+    {
+      "_id": "3",
+      "name": "Jacket",
+      "weather": "cold",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jacket.png"
+    },
+    {
+      "_id": "4",
+      "name": "Sneakers",
+      "weather": "warm",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sneakers.png"
+    },
+    {
+      "_id": "5",
+      "name": "T-Shirt",
+      "weather": "hot",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png"
+    },
+    {
+      "_id": "6",
+      "name": "Coat",
+      "weather": "cold",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png"
+    },
+    {
+      "name": "scarf",
+      "imageUrl": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=400",
+      "weather": "cold",
+      "_id": "CrFVwXW"
+    }
+  ]
+}
