@@ -138,7 +138,7 @@ function App() {
           />
           <ConfirmDeleteModal
             isOpen={activeModal === "confirm-delete"}
-            onClose={closeActiveModal}
+            onClose={() => setActiveModal("preview")}
             onConfirm={() => handleDeleteItem(selectedCard._id)}
           />
         </div>
