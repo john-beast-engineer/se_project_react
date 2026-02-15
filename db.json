@@ -35,12 +35,6 @@
       "name": "Coat",
       "weather": "cold",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png"
-    },
-    {
-      "name": "scarf",
-      "imageUrl": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=400",
-      "weather": "cold",
-      "_id": "CrFVwXW"
     }
   ]
 }
