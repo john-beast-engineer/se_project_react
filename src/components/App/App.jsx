@@ -18,7 +18,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [weatherData, setWeatherData] = useState({
     type: "",
-    temp: { F: 999, C: 999 },
+    temp: { F: null, C: null },
     city: "",
     isDay: true,
   });
@@ -73,7 +73,7 @@ function App() {
   useEffect(() => {
     getItems()
       .then((data) => {
-        setClothingItems(data);
+        setClothingItems(data.reverse());
       })
       .catch(console.error);
   }, []);

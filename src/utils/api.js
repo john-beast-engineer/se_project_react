@@ -3,7 +3,7 @@ const headers = {
   "Content-Type": "application/json",
 };
 
-function handleServerResponse(res) {
+export function handleServerResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 }
 

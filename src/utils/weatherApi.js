@@ -1,4 +1,5 @@
 import { apiKey, coordinates } from "./constants";
+import { handleServerResponse } from "./api";
 
 const getWeatherType = (temperature) => {
   if (temperature >= 86) return "hot";
@@ -9,12 +10,7 @@ const getWeatherType = (temperature) => {
 export const getWeather = () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${apiKey}`;
 
-  return fetch(url).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Error: ${res.status}`);
-  });
+  return fetch(url).then(handleServerResponse);
 };
 
 export const filterWeatherData = (data) => {
