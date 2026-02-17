@@ -1,7 +1,20 @@
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header__logo {
@@ -17,8 +30,6 @@
 }
 
 .header__add-btn {
-  margin-left: auto;
-  margin-right: 20px;
   background: none;
   border: none;
   cursor: pointer;
