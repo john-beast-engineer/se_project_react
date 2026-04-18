@@ -2,58 +2,66 @@
 
 ## About the Project
 
-A React weather application that fetches real-time weather data and recommends clothing based on current conditions. Users can toggle between Fahrenheit and Celsius, navigate between a weather-filtered home page and a full wardrobe profile page, and manage clothing items through a mock REST API.
+A full-stack weather application that fetches real-time weather data and recommends clothing based on current conditions. Users can register, log in, and manage a personal wardrobe. Authentication is handled with JWT tokens stored in localStorage.
 
 ## Features
 
-- Fetches weather data from OpenWeather API
-- Displays current temperature and location
-- Temperature unit toggle (Fahrenheit/Celsius) using React Context
-- Client-side routing between home and profile pages
-- Filters clothing recommendations by weather type (hot/warm/cold) on the home page
-- Displays full wardrobe on the profile page
-- Add new clothing items via modal form with custom useForm hook
-- Delete clothing items with confirmation modal
-- Persistent data storage through json-server mock API
-- Dynamic weather background images (day/night, six weather conditions)
+- Real-time weather data from OpenWeather API
+- Temperature unit toggle (Fahrenheit/Celsius) via React Context
+- User registration and login with JWT authentication
+- Persistent login across page refreshes via token verification
+- Protected profile route — accessible to authenticated users only
+- Add, delete, and like clothing items
+- Filter clothing recommendations by weather type on the home page
+- Profile page displays only the current user's items
+- Edit profile name and avatar
+- Sign out clears token and resets session
 
 ## Technologies Used
+
+**Frontend**
 
 - React 18
 - React Router v6
 - React Context API
 - Custom Hooks (useForm)
 - Vite
-- json-server (mock REST API)
-- OpenWeather API
+
+**Backend**
+
+- Express.js
+- MongoDB / Mongoose
+- JWT authentication
+- bcryptjs
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js installed
+- MongoDB running locally
 - OpenWeather API key
-- json-server installed globally (`npm install -g json-server@^0`)
 
 ### Installation
 
-1. Clone the repo
-
+1. Clone the frontend repo
    git clone https://github.com/john-beast-engineer/se_project_react.git
 
-2. Install dependencies
+2. Clone the backend repo
+   git clone https://github.com/john-beast-engineer/se_project_express.git
 
+3. Install dependencies in both projects
    npm install
 
-3. Add your API key to `src/utils/constants.js`
-
-4. Start the mock server (in a separate terminal)
-
-   json-server --watch db.json --id \_id --port 3001
-
-5. Run the app
-
+4. Start the backend (port 3001)
    npm run dev
+
+5. Start the frontend (port 3000)
+   npm run dev
+
+## Backend Repository
+
+[se_project_express](https://github.com/john-beast-engineer/se_project_express)
 
 ## Demo
 
