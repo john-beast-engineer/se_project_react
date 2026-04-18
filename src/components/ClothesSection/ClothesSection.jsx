@@ -9,7 +9,7 @@ function ClothesSection({
   handleAddClick,
   onCardLike,
 }) {
-  const currentUser = useContext(CurrentUserContext);
+  const { currentUser } = useContext(CurrentUserContext);
 
   return (
     <div className="clothes-section">

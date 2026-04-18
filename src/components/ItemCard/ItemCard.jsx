@@ -3,7 +3,7 @@ import { useContext } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function ItemCard({ item, onCardClick, onCardLike }) {
-  const currentUser = useContext(CurrentUserContext);
+  const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
 
   const handleClick = () => {
     onCardClick(item);
@@ -20,11 +20,13 @@ function ItemCard({ item, onCardClick, onCardLike }) {
     <li className="card" onClick={handleClick}>
       <div className="card__header">
         <h2 className="card__name">{item.name}</h2>
-        <button
-          type="button"
-          className={`card__like-btn ${isLiked ? "card__like-btn_active" : ""}`}
-          onClick={handleLike}
-        />
+        {isLoggedIn && (
+          <button
+            type="button"
+            className={`card__like-btn ${isLiked ? "card__like-btn_active" : ""}`}
+            onClick={handleLike}
+          />
+        )}
       </div>
       <img src={item.imageUrl} alt={item.name} className="card__image" />
     </li>
