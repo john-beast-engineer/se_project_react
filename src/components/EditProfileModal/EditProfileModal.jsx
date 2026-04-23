@@ -1,8 +1,10 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useForm } from "../../hooks/useForm.js";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function EditProfileModal({ isOpen, onUpdateUser, onClose }) {
+  const { currentUser } = useContext(CurrentUserContext);
   const { values, handleChange, setValues } = useForm({
     name: "",
     avatar: "",
@@ -10,9 +12,12 @@ function EditProfileModal({ isOpen, onUpdateUser, onClose }) {
 
   useEffect(() => {
     if (isOpen) {
-      setValues({ name: "", avatar: "" });
+      setValues({
+        name: currentUser?.name ?? "",
+        avatar: currentUser?.avatar ?? "",
+      });
     }
-  }, [isOpen]);
+  }, [isOpen, currentUser]);
 
   function handleUpdateUser(e) {
     e.preventDefault();
@@ -49,7 +54,6 @@ function EditProfileModal({ isOpen, onUpdateUser, onClose }) {
           name="avatar"
           value={values.avatar}
           onChange={handleChange}
-          required
         />
       </label>
     </ModalWithForm>

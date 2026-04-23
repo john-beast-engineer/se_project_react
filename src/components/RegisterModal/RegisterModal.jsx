@@ -51,7 +51,6 @@ function RegisterModal({ isOpen, onRegister, onClose }) {
           name="avatar"
           value={values.avatar}
           onChange={handleChange}
-          required
         />
       </label>
       <label className="modal__label">
