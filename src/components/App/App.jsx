@@ -242,6 +242,13 @@ function App() {
               isOpen={activeModal === "login"}
               onClose={closeActiveModal}
               onLogin={handleLogin}
+              onRegisterClick={() => setActiveModal("register")}
+            />
+            <RegisterModal
+              isOpen={activeModal === "register"}
+              onClose={closeActiveModal}
+              onRegister={handleRegistration}
+              onLoginClick={() => setActiveModal("login")}
             />
             <AddItemModal
               isOpen={activeModal === "add-garment"}

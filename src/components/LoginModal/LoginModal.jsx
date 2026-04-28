@@ -2,7 +2,7 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import { useEffect } from "react";
 import { useForm } from "../../hooks/useForm.js";
 
-function LoginModal({ isOpen, onLogin, onClose }) {
+function LoginModal({ isOpen, onLogin, onClose, onRegisterClick }) {
   const { values, handleChange, setValues } = useForm({
     email: "",
     password: "",
@@ -51,6 +51,16 @@ function LoginModal({ isOpen, onLogin, onClose }) {
           required
         />
       </label>
+      <p className="modal__switch">
+        or{" "}
+        <button
+          type="button"
+          className="modal__switch-btn"
+          onClick={onRegisterClick}
+        >
+          Sign Up
+        </button>
+      </p>
     </ModalWithForm>
   );
 }

@@ -8,11 +8,17 @@ function Sidebar({ onSignOut, onEditProfile }) {
   return (
     <div className="sidebar">
       <div className="sidebar__profile">
-        <img
-          className="sidebar__avatar"
-          src={currentUser.avatar}
-          alt={currentUser.name}
-        />
+        {currentUser.avatar ? (
+          <img
+            className="sidebar__avatar"
+            src={currentUser.avatar}
+            alt={currentUser.name}
+          />
+        ) : (
+          <div className="sidebar__avatar-placeholder">
+            {currentUser.name?.[0]?.toUpperCase()}
+          </div>
+        )}
         <p className="sidebar__username">{currentUser.name}</p>
       </div>
       <div className="sidebar__actions">
@@ -21,7 +27,7 @@ function Sidebar({ onSignOut, onEditProfile }) {
           className="sidebar__edit-btn"
           onClick={onEditProfile}
         >
-          Edit Profile
+          Change Profile data
         </button>
       </div>
       <button
@@ -29,7 +35,7 @@ function Sidebar({ onSignOut, onEditProfile }) {
         className="sidebar__signout-btn"
         onClick={onSignOut}
       >
-        Sign Out
+        Log Out
       </button>
     </div>
   );
