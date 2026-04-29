@@ -29,6 +29,15 @@ function RegisterModal({ isOpen, onRegister, onClose, onLoginClick }) {
       onClose={onClose}
       onSubmit={handleRegister}
       name="register"
+      extraButton={
+        <button
+          type="button"
+          className="modal__switch-btn"
+          onClick={onLoginClick}
+        >
+          Log In
+        </button>
+      }
     >
       <label className="modal__label">
         Name
@@ -77,16 +86,6 @@ function RegisterModal({ isOpen, onRegister, onClose, onLoginClick }) {
           required
         />
       </label>
-      <p className="modal__switch">
-        or{" "}
-        <button
-          type="button"
-          className="modal__switch-btn"
-          onClick={onLoginClick}
-        >
-          Log In
-        </button>
-      </p>
     </ModalWithForm>
   );
 }
